@@ -9,6 +9,25 @@ Este proyecto utiliza un **ESP32** para medir los niveles de ruido en tiempo rea
 - **Conexión WebSocket**: Comunicación en tiempo real entre el ESP32 y la interfaz web.
 - **Configuración adaptable**: Umbrales ajustables para definir niveles de ruido aceptables.
 
+## ¿Qué es WebSocket y por qué se usa?
+
+**WebSocket** es un protocolo que permite una comunicación bidireccional en tiempo real entre un cliente (como un navegador web) y un servidor (en este caso, el ESP32). A diferencia de las conexiones HTTP tradicionales, donde cada solicitud del cliente genera una respuesta del servidor, WebSocket establece un canal persistente, lo que lo hace ideal para aplicaciones que necesitan actualizar información de manera continua y eficiente.
+
+En este proyecto:
+
+1. **ESP32 como servidor WebSocket**:
+   - Actúa como el punto central que recopila datos del sensor KY-038 y los envía a todos los clientes conectados en tiempo real.
+   - Es eficiente, ya que evita la sobrecarga de abrir y cerrar conexiones para cada transmisión.
+
+2. **Cliente web como receptor**:
+   - Usa un navegador web para conectarse al servidor WebSocket del ESP32.
+   - Recibe los datos continuamente y los utiliza para actualizar la interfaz gráfica sin necesidad de recargar la página.
+
+Las ventajas de WebSocket en este proyecto incluyen:
+- **Baja latencia**: Los datos se transmiten tan pronto como están disponibles.
+- **Eficiencia**: Reduce el consumo de recursos del ESP32 y del navegador.
+- **Experiencia fluida**: Permite una actualización constante de la interfaz sin interrupciones.
+
 ## Tecnologías utilizadas
 
 - **Hardware**: ESP32, sensor KY-038.
