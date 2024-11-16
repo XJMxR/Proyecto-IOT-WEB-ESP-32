@@ -84,7 +84,8 @@ Las ventajas de WebSocket en este proyecto incluyen:
 
 ## Captura de pantalla
 
-![image](https://github.com/user-attachments/assets/c07d23fd-f59e-4244-bc15-606c80174f68)
+![PaginaWebIndicadorDeRuido](https://github.com/user-attachments/assets/fb9f0e94-da55-4c79-8190-3e6f0d4a2e66)
+
 
 
 
