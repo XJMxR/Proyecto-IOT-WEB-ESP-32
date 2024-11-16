@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indicador de Ruido</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      color: #333;
+    }
+    #nivelRuido {
+      font-size: 1.5rem;
+      margin: 10px;
+    }
+    /* Estilo del LED indicador */
+    #led {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #00FF00; /* Color verde por defecto (sin ruido) */
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <h1>Indicador de Ruido en Tiempo Real</h1>
+  <div id="nivelRuido">Conectando...</div>
+  <div id="led"></div> <!-- LED indicador de ruido -->
+
+  <script>
+    // Cambia ESP32_IP por la dirección IP del ESP32 en tu red local
+    const socket = new WebSocket('ws://192.168.212.72:81/');
+
+    socket.onopen = () => {
+      console.log("Conectado al ESP32");
+      document.getElementById('nivelRuido').innerText = "Esperando datos...";
+    };
+
+    socket.onmessage = (event) => {
+      // Convertir el valor recibido a número
+      const ruido = parseInt(event.data);
+
+      // Mostrar el valor de ruido en el texto
+      document.getElementById('nivelRuido').innerText = `Ruido detectado: ${ruido}`;
+
+      // Si el ruido es alto, cambiar el LED a rojo; si es bajo, a verde
+      if (ruido >= 450) {  // Ajusta este umbral según lo que consideres "ruido alto"
+        document.getElementById('led').style.backgroundColor = '#FF0000'; // Rojo (ruido detectado)
+      } else {
+        document.getElementById('led').style.backgroundColor = '#00FF00'; // Verde (sin ruido)
+      }
+    };
+
+    socket.onclose = () => {
+      console.log("Desconectado del ESP32");
+      document.getElementById('nivelRuido').innerText = "Conexión perdida";
+    };
+
+    socket.onerror = (error) => {
+      console.error("Error de WebSocket:", error);
+      document.getElementById('nivelRuido').innerText = "Error de conexión";
+    };
+  </script>
+</body>
+</html>
