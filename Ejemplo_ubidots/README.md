@@ -1,4 +1,4 @@
-```markdown
+markdown
 # Proyecto ESP32 vinculado a Ubidots para medir niveles de ruido
 
 Este proyecto utiliza un ESP32 para leer niveles de ruido de un sensor KY-038 y enviar los datos a **Ubidots** mediante MQTT. A continuación, se detallan los pasos para configurar y ejecutar el código.
