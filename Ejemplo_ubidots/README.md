@@ -79,6 +79,13 @@ Este proyecto utiliza un ESP32 para leer niveles de ruido de un sensor KY-038 y 
 
 ---
 
+## Capturas
+
+![ubitdots](https://github.com/user-attachments/assets/fcb8c5ea-4c56-4846-9848-6fff6923583a)
+
+
+---
+
 ## Solución de problemas
 
 1. **No conecta a Wi-Fi**:
