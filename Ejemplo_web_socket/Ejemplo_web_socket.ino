@@ -1,8 +1,8 @@
 #include <WiFi.h>
 #include <WebSocketsServer.h>
 
-const char* ssid = "POCO X5 Pro 5G";  // Cambia por tu SSID
-const char* password = "Facil123";      // Cambia por tu contraseña
+const char* ssid = "";  // Cambia por tu SSID
+const char* password = "";      // Cambia por tu contraseña
 
 WebSocketsServer webSocket = WebSocketsServer(81);
 const int analogPin = 34;  // Pin A0 conectado al KY-038
