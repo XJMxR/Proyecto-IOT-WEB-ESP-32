@@ -1,8 +1,8 @@
 #include <WiFi.h>
 #include "UbidotsEsp32Mqtt.h"
 
-const char* SSID = "motor";
-const char* PASSWORD = "16641827";
+const char* SSID = "motorola one vision 8615";
+const char* PASSWORD = "31e77e9c6bb6c";
 #define TOKEN "BBUS-KUuotP0hBAvX4OhH2fOrFTUb7SghPs"
 #define DEVICE_LABEL "Sound"
 #define VARIABLE_LABEL_ANALOG "nivel_ruido"
