@@ -2,6 +2,8 @@
 
 Este proyecto utiliza un **ESP32** para medir los niveles de ruido en tiempo real mediante un sensor KY-038 y muestra la información en una página web interactiva a través de WebSockets.
 
+
+
 ## Características
 
 - **Medición en tiempo real**: Lee los datos del sensor de sonido conectado al ESP32.
@@ -9,9 +11,13 @@ Este proyecto utiliza un **ESP32** para medir los niveles de ruido en tiempo rea
 - **Conexión WebSocket**: Comunicación en tiempo real entre el ESP32 y la interfaz web.
 - **Configuración adaptable**: Umbrales ajustables para definir niveles de ruido aceptables.
 
+
+
 ## ¿Qué es WebSocket y por qué se usa?
 
 **WebSocket** es un protocolo que permite una comunicación bidireccional en tiempo real entre un cliente (como un navegador web) y un servidor (en este caso, el ESP32). A diferencia de las conexiones HTTP tradicionales, donde cada solicitud del cliente genera una respuesta del servidor, WebSocket establece un canal persistente, lo que lo hace ideal para aplicaciones que necesitan actualizar información de manera continua y eficiente.
+
+
 
 En este proyecto:
 
@@ -28,11 +34,15 @@ Las ventajas de WebSocket en este proyecto incluyen:
 - **Eficiencia**: Reduce el consumo de recursos del ESP32 y del navegador.
 - **Experiencia fluida**: Permite una actualización constante de la interfaz sin interrupciones.
 
+
+
 ## Tecnologías utilizadas
 
 - **Hardware**: ESP32, sensor KY-038.
 - **Frontend**: HTML, CSS, JavaScript.
 - **Backend**: Servidor WebSocket implementado en el ESP32.
+
+
 
 ## Cómo funciona
 
@@ -44,6 +54,7 @@ Las ventajas de WebSocket en este proyecto incluyen:
      - Verde: Ruido bajo.
      - Rojo: Ruido alto.
 
+
 ## Configuración
 
 1. **ESP32**:
@@ -52,11 +63,15 @@ Las ventajas de WebSocket en este proyecto incluyen:
 2. **Página web**:
    - Reemplaza `192.168.212.72` con la dirección IP local del ESP32.
 
+
+
 ## Requisitos
 
 - ESP32 con soporte para Wi-Fi.
 - Sensor KY-038 o equivalente.
 - Navegador web compatible con WebSockets.
+
+
 
 ## Uso
 
@@ -65,9 +80,13 @@ Las ventajas de WebSocket en este proyecto incluyen:
 3. Abre la página web incluida (`index.html`) en un navegador y verifica la conexión con el ESP32.
 4. Observa los niveles de ruido en tiempo real.
 
+
+
 ## Captura de pantalla
 
 ![Indicador de ruido](ruta/a/imagen.png)
+
+
 
 ## Mejoras futuras
 
@@ -75,6 +94,6 @@ Las ventajas de WebSocket en este proyecto incluyen:
 - Implementar una interfaz de usuario más avanzada con gráficos en tiempo real.
 - Compatibilidad con dispositivos móviles.
 
-## Licencia
+## Equipo 
 
-Este proyecto está disponible bajo la licencia MIT.
+Grupo IOT 2024B
