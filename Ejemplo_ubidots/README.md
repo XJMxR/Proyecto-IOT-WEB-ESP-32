@@ -62,8 +62,7 @@ Este proyecto utiliza un ESP32 para leer niveles de ruido de un sensor KY-038 y 
 
 1. **Configurar Arduino IDE**:
    - Instala las librerías necesarias:
-    - [descarga e instala la Ubidots ESP MQTT Library. Para una explicación detallada sobre cómo instalar bibliotecas usando el Arduino IDE, consulta esta guía.
-](https://help.ubidots.com/es/articles/748067-conectar-un-esp32-devkitc-a-ubidots-a-traves-de-mqtt#:~:text=descarga%20e%20instala%20la%20Ubidots%20ESP%20MQTT%20Library.%20Para%20una%20explicaci%C3%B3n%20detallada%20sobre%20c%C3%B3mo%20instalar%20bibliotecas%20usando%20el%20Arduino%20IDE%2C%20consulta%20esta%20gu%C3%ADa.)
+    - descarga e instala la [Ubidots ESP MQTT Library](https://help.ubidots.com/es/articles/748067-conectar-un-esp32-devkitc-a-ubidots-a-traves-de-mqtt#:~:text=Ubidots%20ESP%20MQTT%20Library). Para una explicación detallada sobre cómo instalar bibliotecas usando el Arduino IDE, consulta [esta guía](https://help.ubidots.com/technical-resources/setting-up-the-arduino-ide-for-ubidots).
 2. **Editar el código**:
    - Modifica los valores de:
      - SSID y contraseña de tu red Wi-Fi.
